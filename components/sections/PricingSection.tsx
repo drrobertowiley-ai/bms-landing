@@ -48,7 +48,7 @@ const PLANS: ReadonlyArray<Plan> = [
   {
     name: "Professional",
     tagline: "Plataforma completa",
-    price: "$999",
+    price: "$899",
     priceNote: "MXN / mes",
     features: [
       "Hasta 30 usuarios",
