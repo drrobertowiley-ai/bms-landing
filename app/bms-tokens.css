@@ -1,0 +1,89 @@
+/* ============================================================
+   BMS — Brand Design Tokens
+   ============================================================
+   Importa este archivo en tu CSS global (ej: globals.css)
+   o en el entry point de tu app.
+   ============================================================ */
+
+:root {
+  /* === Color primario de marca === */
+  --bms-blue-900: #1E3A8A;     /* Azul profundo — fondos, headers oscuros */
+  --bms-blue-700: #1D4ED8;     /* Azul institucional */
+  --bms-blue-600: #2563EB;     /* Azul corporativo principal (CTA, links) */
+  --bms-blue-500: #3B82F6;     /* Azul activo (hover, focus) */
+  --bms-blue-400: #60A5FA;     /* Azul acento (indicadores, badges) */
+  --bms-blue-100: #DBEAFE;     /* Azul muy claro (backgrounds suaves) */
+  --bms-blue-50:  #EFF6FF;     /* Azul tinte (highlight de filas, hover) */
+
+  /* === Gradiente del icono === */
+  --bms-gradient: linear-gradient(135deg, #1E3A8A 0%, #2563EB 100%);
+
+  /* === Neutros (sistema completo) === */
+  --bms-slate-900: #0F172A;    /* Texto principal, headlines */
+  --bms-slate-700: #334155;    /* Texto enfático */
+  --bms-slate-600: #475569;    /* Texto cuerpo */
+  --bms-slate-500: #64748B;    /* Texto secundario, labels */
+  --bms-slate-400: #94A3B8;    /* Texto muted, placeholders */
+  --bms-slate-300: #CBD5E1;    /* Bordes activos */
+  --bms-slate-200: #E2E8F0;    /* Bordes sutiles */
+  --bms-slate-100: #F1F5F9;    /* Fondos de superficie */
+  --bms-slate-50:  #F8FAFC;    /* Background base claro */
+
+  /* === Estados semánticos === */
+  --bms-success:   #10B981;
+  --bms-warning:   #F59E0B;
+  --bms-danger:    #EF4444;
+  --bms-info:      #2563EB;    /* mismo que blue-600 — coherencia */
+
+  /* === Roles de UI === */
+  --bms-bg:           var(--bms-slate-50);
+  --bms-surface:      #FFFFFF;
+  --bms-surface-alt:  var(--bms-slate-100);
+  --bms-border:       var(--bms-slate-200);
+  --bms-text:         var(--bms-slate-900);
+  --bms-text-muted:   var(--bms-slate-500);
+  --bms-primary:      var(--bms-blue-600);
+  --bms-primary-hover:var(--bms-blue-700);
+  --bms-accent:       var(--bms-blue-400);
+
+  /* === Tipografía === */
+  --bms-font-sans: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', system-ui, sans-serif;
+  --bms-font-mono: 'JetBrains Mono', 'Fira Code', ui-monospace, monospace;
+
+  /* === Radios === */
+  --bms-radius-sm: 6px;
+  --bms-radius-md: 10px;
+  --bms-radius-lg: 16px;
+  --bms-radius-xl: 24px;
+
+  /* === Sombras (sutiles, corporativas) === */
+  --bms-shadow-sm: 0 1px 2px 0 rgb(15 23 42 / 0.05);
+  --bms-shadow-md: 0 4px 12px -2px rgb(15 23 42 / 0.08);
+  --bms-shadow-lg: 0 12px 32px -8px rgb(15 23 42 / 0.12);
+}
+
+/* === Dark mode === */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bms-bg:           #0F172A;
+    --bms-surface:      #1E293B;
+    --bms-surface-alt:  #334155;
+    --bms-border:       #334155;
+    --bms-text:         #F8FAFC;
+    --bms-text-muted:   #94A3B8;
+    --bms-primary:      var(--bms-blue-500);
+    --bms-primary-hover:var(--bms-blue-400);
+  }
+}
+
+/* === Override manual (si usas .dark class en lugar de media query) === */
+.dark {
+  --bms-bg:           #0F172A;
+  --bms-surface:      #1E293B;
+  --bms-surface-alt:  #334155;
+  --bms-border:       #334155;
+  --bms-text:         #F8FAFC;
+  --bms-text-muted:   #94A3B8;
+  --bms-primary:      var(--bms-blue-500);
+  --bms-primary-hover:var(--bms-blue-400);
+}
