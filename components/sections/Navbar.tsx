@@ -44,8 +44,7 @@ export function Navbar() {
         >
           <BmsLogo
             variant="dark"
-            withTagline={false}
-            className="h-9 w-auto"
+            className="h-11 w-auto sm:h-12"
           />
         </Link>
 

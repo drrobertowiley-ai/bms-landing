@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowRight, ExternalLink } from "lucide-react";
+import { BmsLogo } from "@/components/bms-logo";
 import { DashboardMock } from "@/components/sections/DashboardMock";
 
 export function HeroSection() {
@@ -27,6 +28,14 @@ export function HeroSection() {
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           {/* Texto */}
           <div className="text-center lg:text-left">
+            {/* Brand display - logo grande con tagline visible */}
+            <div className="mb-6 flex justify-center lg:justify-start">
+              <BmsLogo
+                variant="dark"
+                className="h-24 w-auto sm:h-28 lg:h-32"
+              />
+            </div>
+
             {/* Eyebrow */}
             <div className="inline-flex items-center gap-2 rounded-full border border-bms-slate-200 bg-white px-3 py-1 text-xs font-medium text-bms-slate-700 shadow-bms-sm">
               <span className="relative inline-flex h-2 w-2">
@@ -42,7 +51,7 @@ export function HeroSection() {
             {/* Title */}
             <h1
               id="hero-title"
-              className="mt-6 text-balance text-4xl font-bold tracking-tight text-bms-slate-900 sm:text-5xl lg:text-6xl"
+              className="mt-5 text-balance text-3xl font-bold tracking-tight text-bms-slate-900 sm:text-4xl lg:text-5xl"
               style={{ letterSpacing: "-0.03em" }}
             >
               Toda tu empresa en una sola plataforma.
