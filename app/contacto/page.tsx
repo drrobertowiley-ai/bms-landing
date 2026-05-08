@@ -50,10 +50,10 @@ export default function ContactoPage() {
                       Email directo
                     </p>
                     <a
-                      href="mailto:drrobertowiley@gmail.com"
+                      href="mailto:contacto@bms.services"
                       className="text-sm text-bms-slate-600 transition-colors hover:text-bms-blue-700 focus-bms"
                     >
-                      drrobertowiley@gmail.com
+                      contacto@bms.services
                     </a>
                   </div>
                 </li>

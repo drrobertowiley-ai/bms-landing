@@ -119,11 +119,11 @@ export function Footer() {
             <ul className="mt-4 space-y-3">
               <li>
                 <a
-                  href="mailto:drrobertowiley@gmail.com"
+                  href="mailto:contacto@bms.services"
                   className="inline-flex items-center gap-2 text-sm text-bms-slate-600 transition-colors hover:text-bms-blue-700 focus-bms"
                 >
                   <Mail className="h-4 w-4" aria-hidden="true" />
-                  drrobertowiley@gmail.com
+                  contacto@bms.services
                 </a>
               </li>
               <li>

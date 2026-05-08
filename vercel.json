@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.bms.services"
+        }
+      ],
+      "destination": "https://bms.services/:path*",
+      "permanent": true
+    }
+  ]
+}

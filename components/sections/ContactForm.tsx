@@ -38,7 +38,7 @@ export function ContactForm() {
     ].join("\n");
 
     const mailto =
-      "mailto:drrobertowiley@gmail.com" +
+      "mailto:contacto@bms.services" +
       `?subject=${encodeURIComponent(subject)}` +
       `&body=${encodeURIComponent(body)}`;
 
@@ -144,7 +144,7 @@ export function ContactForm() {
           className="mt-4 text-sm text-bms-success"
         >
           Abrimos tu cliente de correo. Si no se abre, escríbenos directo a
-          drrobertowiley@gmail.com.
+          contacto@bms.services.
         </p>
       )}
 
