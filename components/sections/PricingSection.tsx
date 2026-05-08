@@ -15,27 +15,52 @@ const PLANS: ReadonlyArray<Plan> = [
   {
     name: "Starter",
     tagline: "Para empezar",
-    price: "$1,990",
+    price: "$299",
     priceNote: "MXN / mes",
     features: [
       "Hasta 5 usuarios",
+      "Dashboard ejecutivo",
       "3 módulos a tu elección",
+      "Aislamiento multi-tenant",
+      "Política de contraseñas estricta",
+      "Respaldos automáticos diarios",
       "Soporte por email",
-      "Bitácora básica",
+    ],
+    ctaLabel: "Solicitar demo",
+  },
+  {
+    name: "Standard",
+    tagline: "Para PyMES en crecimiento",
+    price: "$599",
+    priceNote: "MXN / mes",
+    features: [
+      "Hasta 15 usuarios",
+      "Dashboard ejecutivo",
+      "7 módulos a tu elección",
+      "Logo de empresa (co-branding)",
+      "Bitácora de auditoría",
+      "Snapshots descargables",
+      "MFA opcional",
+      "Soporte por email",
     ],
     ctaLabel: "Solicitar demo",
   },
   {
     name: "Professional",
-    tagline: "Para equipos completos",
-    price: "$4,990",
+    tagline: "Plataforma completa",
+    price: "$999",
     priceNote: "MXN / mes",
     features: [
-      "Hasta 25 usuarios",
-      "Todos los módulos incluidos",
-      "MFA y bitácora completa",
+      "Hasta 30 usuarios",
+      "Dashboard ejecutivo",
+      "Los 11 módulos incluidos",
+      "Escáner QR (producción)",
+      "Trazabilidad completa de lotes",
+      "Reportes ejecutivos",
+      "MFA obligatorio + lockout",
+      "Bitácora completa exportable",
+      "Política de Seguridad PDF personalizada",
       "Soporte prioritario",
-      "Onboarding guiado",
     ],
     highlighted: true,
     ctaLabel: "Solicitar demo",
@@ -47,10 +72,14 @@ const PLANS: ReadonlyArray<Plan> = [
     priceNote: "personalizada",
     features: [
       "Usuarios ilimitados",
+      "Todo lo de Professional",
       "SLA 99.9%",
-      "Onboarding dedicado",
-      "Integraciones a la medida",
-      "Gerente de cuenta",
+      "Onboarding dedicado (1-2 semanas)",
+      "Integraciones a la medida (API, ERP)",
+      "Backup local interno (3 capas)",
+      "Ambiente de pruebas (staging)",
+      "Soporte 24/7 con SLA",
+      "Gerente de cuenta dedicado",
     ],
     ctaLabel: "Hablar con ventas",
   },
@@ -81,7 +110,7 @@ export function PricingSection() {
           </p>
         </div>
 
-        <ul className="mt-14 grid grid-cols-1 gap-6 lg:grid-cols-3">
+        <ul className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {PLANS.map((plan) => (
             <li key={plan.name} className="flex">
               <article
@@ -110,11 +139,11 @@ export function PricingSection() {
                   </p>
                 </div>
 
-                <div className="mt-6 flex items-baseline gap-2">
-                  <span className="text-4xl font-bold tracking-tight text-bms-slate-900">
+                <div className="mt-6 flex flex-wrap items-baseline gap-x-2 gap-y-0.5">
+                  <span className="text-3xl font-bold tracking-tight text-bms-slate-900">
                     {plan.price}
                   </span>
-                  <span className="text-sm text-bms-slate-500">
+                  <span className="text-xs text-bms-slate-500">
                     {plan.priceNote}
                   </span>
                 </div>
