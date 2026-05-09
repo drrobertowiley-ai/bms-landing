@@ -9,79 +9,90 @@ interface Plan {
   features: ReadonlyArray<string>;
   highlighted?: boolean;
   ctaLabel: string;
+  ctaHref: string;
+  ctaExternal?: boolean;
 }
+
+const APP_COMENZAR_URL = "https://app.bms.services/comenzar";
+const MULTIEMPRESA_MAILTO =
+  "mailto:contacto@bms.services?subject=Cotizacion%20plan%20Multiempresa%20BMS";
 
 const PLANS: ReadonlyArray<Plan> = [
   {
-    name: "Starter",
-    tagline: "Para empezar",
+    name: "Microempresa",
+    tagline: "Para empresas pequeñas enfocadas",
     price: "$299",
     priceNote: "MXN / mes",
     features: [
       "Hasta 5 usuarios",
       "Dashboard ejecutivo",
-      "3 módulos a tu elección",
+      "1 módulo comercial a tu elección",
       "Aislamiento multi-tenant",
       "Política de contraseñas estricta",
       "Respaldos automáticos diarios",
       "Soporte por email",
     ],
-    ctaLabel: "Solicitar demo",
+    ctaLabel: "Comenzar",
+    ctaHref: APP_COMENZAR_URL,
+    ctaExternal: true,
   },
   {
-    name: "Standard",
-    tagline: "Para PyMES en crecimiento",
+    name: "PyME",
+    tagline: "Para empresas medianas en crecimiento",
     price: "$599",
     priceNote: "MXN / mes",
     features: [
       "Hasta 15 usuarios",
       "Dashboard ejecutivo",
-      "7 módulos a tu elección",
+      "3 módulos comerciales a tu elección",
       "Logo de empresa (co-branding)",
       "Bitácora de auditoría",
       "Snapshots descargables",
       "MFA opcional",
       "Soporte por email",
     ],
-    ctaLabel: "Solicitar demo",
+    highlighted: true,
+    ctaLabel: "Comenzar",
+    ctaHref: APP_COMENZAR_URL,
+    ctaExternal: true,
   },
   {
-    name: "Professional",
-    tagline: "Plataforma completa",
+    name: "Empresa Grande",
+    tagline: "Operación completa, los 5 módulos",
     price: "$899",
     priceNote: "MXN / mes",
     features: [
       "Hasta 30 usuarios",
       "Dashboard ejecutivo",
-      "Los 11 módulos incluidos",
-      "Escáner QR (producción)",
-      "Trazabilidad completa de lotes",
-      "Reportes ejecutivos",
+      "Los 5 módulos comerciales completos",
+      "Producción · Materiales · Ventas & CRM · Operativa · Administración",
       "MFA obligatorio + lockout",
       "Bitácora completa exportable",
       "Política de Seguridad PDF personalizada",
       "Soporte prioritario",
     ],
-    highlighted: true,
-    ctaLabel: "Solicitar demo",
+    ctaLabel: "Comenzar",
+    ctaHref: APP_COMENZAR_URL,
+    ctaExternal: true,
   },
   {
-    name: "Enterprise",
-    tagline: "Para operaciones grandes",
+    name: "Multiempresa",
+    tagline: "Para holdings, franquicias y grupos",
     price: "Cotización",
     priceNote: "personalizada",
     features: [
       "Usuarios ilimitados",
-      "Todo lo de Professional",
+      "Todos los módulos comerciales",
+      "Multi-empresa bajo super-admin",
       "SLA 99.9%",
-      "Onboarding dedicado (1-2 semanas)",
+      "Onboarding dedicado",
       "Integraciones a la medida (API, ERP)",
-      "Backup local interno (3 capas)",
-      "Ambiente de pruebas (staging)",
       "Soporte 24/7 con SLA",
       "Gerente de cuenta dedicado",
     ],
     ctaLabel: "Hablar con ventas",
+    ctaHref: MULTIEMPRESA_MAILTO,
+    ctaExternal: false,
   },
 ];
 
@@ -163,17 +174,33 @@ export function PricingSection() {
                   ))}
                 </ul>
 
-                <Link
-                  href="/contacto"
-                  className={[
-                    "mt-8 inline-flex h-11 items-center justify-center rounded-bms-md px-5 text-sm font-semibold transition-colors focus-bms",
-                    plan.highlighted
-                      ? "bg-bms-blue-600 text-white shadow-bms-sm hover:bg-bms-blue-700"
-                      : "border border-bms-slate-200 bg-white text-bms-slate-900 hover:border-bms-slate-300 hover:bg-bms-slate-50",
-                  ].join(" ")}
-                >
-                  {plan.ctaLabel}
-                </Link>
+                {plan.ctaExternal ? (
+                  <a
+                    href={plan.ctaHref}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={[
+                      "mt-8 inline-flex h-11 items-center justify-center rounded-bms-md px-5 text-sm font-semibold transition-colors focus-bms",
+                      plan.highlighted
+                        ? "bg-bms-blue-600 text-white shadow-bms-sm hover:bg-bms-blue-700"
+                        : "border border-bms-slate-200 bg-white text-bms-slate-900 hover:border-bms-slate-300 hover:bg-bms-slate-50",
+                    ].join(" ")}
+                  >
+                    {plan.ctaLabel}
+                  </a>
+                ) : (
+                  <Link
+                    href={plan.ctaHref}
+                    className={[
+                      "mt-8 inline-flex h-11 items-center justify-center rounded-bms-md px-5 text-sm font-semibold transition-colors focus-bms",
+                      plan.highlighted
+                        ? "bg-bms-blue-600 text-white shadow-bms-sm hover:bg-bms-blue-700"
+                        : "border border-bms-slate-200 bg-white text-bms-slate-900 hover:border-bms-slate-300 hover:bg-bms-slate-50",
+                    ].join(" ")}
+                  >
+                    {plan.ctaLabel}
+                  </Link>
+                )}
               </article>
             </li>
           ))}

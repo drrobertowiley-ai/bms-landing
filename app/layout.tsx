@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "BMS · Plataforma SaaS para administrar tu empresa",
   description:
-    "Multi-tenant, seguro y listo para tu negocio. 11 módulos integrados, MFA, auditoría completa y respaldos en 3 capas.",
+    "Multi-tenant, seguro y listo para tu negocio. 5 módulos comerciales integrados, MFA, auditoría completa y respaldos en 3 capas.",
   applicationName: "BMS · Business Management System",
   keywords: [
     "ERP",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "BMS · Plataforma SaaS para administrar tu empresa",
     description:
-      "Multi-tenant, seguro y listo para tu negocio. 11 módulos integrados, MFA, auditoría completa y respaldos en 3 capas.",
+      "Multi-tenant, seguro y listo para tu negocio. 5 módulos comerciales integrados, MFA, auditoría completa y respaldos en 3 capas.",
     locale: "es_MX",
     type: "website",
   },
