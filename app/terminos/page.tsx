@@ -16,8 +16,12 @@ export default function TerminosPage() {
         Estos Términos del Servicio (en adelante, los <strong>&quot;Términos&quot;</strong>)
         regulan el acceso y uso de la plataforma <strong>BMS — Business
         Management System</strong> (en adelante, la <strong>&quot;Plataforma&quot;</strong> o el
-        <strong> &quot;Servicio&quot;</strong>) ofrecida bajo el dominio{" "}
-        <a href="https://bms.services">bms.services</a> y sus subdominios.
+        <strong> &quot;Servicio&quot;</strong>) operada por{" "}
+        <strong>EPX Solutions de México S.A. de C.V.</strong> (en adelante,{" "}
+        <strong>&quot;BMS&quot;</strong>), con domicilio en Av. Río Mocorito 801 L1,
+        Mexicali, Baja California, C.P. 21290, México, y ofrecida bajo el
+        dominio <a href="https://bms.services">bms.services</a> y sus
+        subdominios.
       </p>
       <p>
         Al registrarse, acceder o utilizar la Plataforma, el cliente
@@ -183,9 +187,10 @@ export default function TerminosPage() {
       <h2>12. Ley aplicable y jurisdicción</h2>
       <p>
         Estos Términos se rigen por las leyes de los Estados Unidos Mexicanos.
-        Cualquier controversia será resuelta por los tribunales competentes de
-        la Ciudad de México, renunciando las partes a cualquier otro fuero que
-        pudiera corresponderles.
+        Cualquier controversia será resuelta por los tribunales competentes
+        de Mexicali, Baja California, renunciando las partes a cualquier
+        otro fuero que pudiera corresponderles por razón de su domicilio
+        presente o futuro.
       </p>
 
       <h2>13. Contacto</h2>

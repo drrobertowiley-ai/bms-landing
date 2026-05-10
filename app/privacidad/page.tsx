@@ -21,10 +21,12 @@ export default function PrivacidadPage() {
 
       <h2>1. Identidad y domicilio del responsable</h2>
       <p>
-        <strong>BMS — Business Management System</strong>, con domicilio en
-        Ciudad de México, México, es el responsable del tratamiento de sus
-        datos personales. Para cualquier asunto relacionado con la protección
-        de datos personales puede contactarnos al correo{" "}
+        <strong>EPX Solutions de México S.A. de C.V.</strong>, con domicilio
+        en Av. Río Mocorito 801 L1, Mexicali, Baja California, C.P. 21290,
+        México, operadora de la plataforma BMS — Business Management System,
+        es el responsable del tratamiento de sus datos personales. Para
+        cualquier asunto relacionado con la protección de datos personales
+        puede contactarnos al correo{" "}
         <a href="mailto:contacto@bms.services">contacto@bms.services</a>.
       </p>
 
