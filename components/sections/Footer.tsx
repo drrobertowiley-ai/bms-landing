@@ -20,6 +20,7 @@ const PRODUCT_LINKS = [
   { href: "#producto", label: "Módulos" },
   { href: "#seguridad", label: "Seguridad" },
   { href: "#precios", label: "Precios" },
+  { href: "/ayuda", label: "Centro de ayuda" },
   { href: "#faq", label: "Preguntas frecuentes" },
 ] as const;
 
@@ -31,6 +32,7 @@ const SECURITY_LINKS = [
   },
   { href: "/terminos", label: "Términos del servicio", external: false },
   { href: "/privacidad", label: "Privacidad", external: false },
+  { href: "/sla", label: "SLA", external: false },
 ] as const;
 
 export function Footer() {
