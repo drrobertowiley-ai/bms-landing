@@ -51,11 +51,10 @@ const MODULES: ReadonlyArray<CommercialModule> = [
     name: "Ventas & CRM",
     tagline: "Comercial y clientes",
     description:
-      "Pipeline de clientes, cotizaciones, pedidos, portal para tus vendedores externos y herramientas de marketing.",
+      "Pipeline de clientes, cotizaciones, pedidos y portal independiente para tus vendedores externos.",
     subFeatures: [
       { name: "Ventas" },
       { name: "Portal Vendedor" },
-      { name: "Marketing", comingSoon: true },
     ],
   },
   {
@@ -63,13 +62,11 @@ const MODULES: ReadonlyArray<CommercialModule> = [
     name: "Gestión Operativa",
     tagline: "Calidad, mantenimiento y procesos",
     description:
-      "SGC con no conformidades y CAPA, mantenimiento de equipos, ingeniería de procesos, proyectos y consultoría.",
+      "SGC con no conformidades y CAPA, mantenimiento de equipos e ingeniería de procesos para mejora continua.",
     subFeatures: [
       { name: "Calidad & SGC" },
       { name: "Mantenimiento" },
       { name: "Ingeniería de Procesos" },
-      { name: "Proyectos", comingSoon: true },
-      { name: "Consultoría", comingSoon: true },
     ],
   },
   {
