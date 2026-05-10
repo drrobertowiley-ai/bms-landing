@@ -4,10 +4,36 @@ import { Footer } from "@/components/sections/Footer";
 import { ContactForm } from "@/components/sections/ContactForm";
 import { Mail, Phone, MapPin } from "lucide-react";
 
+const TITLE = "Solicitar demo · BMS";
+const DESCRIPTION =
+  "Agenda una demo de 30 minutos con BMS. Te mostramos la plataforma con datos parecidos a los de tu empresa.";
+
 export const metadata: Metadata = {
-  title: "Solicitar demo · BMS",
-  description:
-    "Agenda una demo de 30 minutos con BMS. Te mostramos la plataforma con datos parecidos a los de tu empresa.",
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: "/contacto" },
+  openGraph: {
+    type: "website",
+    locale: "es_MX",
+    url: "/contacto",
+    siteName: "BMS · Business Management System",
+    title: TITLE,
+    description: DESCRIPTION,
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Solicitar demo de BMS",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+    images: ["/twitter-image.png"],
+  },
 };
 
 export default function ContactoPage() {

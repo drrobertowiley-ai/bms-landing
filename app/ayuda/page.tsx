@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import {
   HelpCircle,
@@ -15,10 +16,36 @@ import {
   Briefcase,
 } from "lucide-react";
 
-export const metadata = {
-  title: "Centro de Ayuda — BMS",
-  description:
-    "Guías, tutoriales y respuestas a las preguntas más frecuentes sobre la plataforma BMS.",
+const TITLE = "Centro de Ayuda — BMS";
+const DESCRIPTION =
+  "Guías, tutoriales y respuestas a las preguntas más frecuentes sobre la plataforma BMS.";
+
+export const metadata: Metadata = {
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: "/ayuda" },
+  openGraph: {
+    type: "website",
+    locale: "es_MX",
+    url: "/ayuda",
+    siteName: "BMS · Business Management System",
+    title: TITLE,
+    description: DESCRIPTION,
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Centro de Ayuda de BMS",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+    images: ["/twitter-image.png"],
+  },
 };
 
 const QUICK_LINKS = [

@@ -28,6 +28,9 @@ yarn-error.log*
 # local env files
 .env*.local
 
+# newsletter stub local file (until integramos Resend/Mailchimp)
+/newsletter-subscribers.json
+
 # vercel
 .vercel
 

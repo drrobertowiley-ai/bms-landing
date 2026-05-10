@@ -1,10 +1,37 @@
+import type { Metadata } from "next";
 import { LegalLayout } from "@/components/legal/LegalLayout";
 
-export const metadata = {
-  title: "Aviso de Privacidad — BMS",
-  description:
-    "Política de privacidad y aviso de privacidad de la plataforma BMS conforme a la LFPDPPP.",
+const TITLE = "Aviso de Privacidad — BMS";
+const DESCRIPTION =
+  "Política de privacidad y aviso de privacidad de la plataforma BMS conforme a la LFPDPPP.";
+
+export const metadata: Metadata = {
+  title: TITLE,
+  description: DESCRIPTION,
   robots: { index: true, follow: true },
+  alternates: { canonical: "/privacidad" },
+  openGraph: {
+    type: "article",
+    locale: "es_MX",
+    url: "/privacidad",
+    siteName: "BMS · Business Management System",
+    title: TITLE,
+    description: DESCRIPTION,
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Aviso de privacidad de BMS",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+    images: ["/twitter-image.png"],
+  },
 };
 
 const LAST_UPDATED = "9 de mayo de 2026";

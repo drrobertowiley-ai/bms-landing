@@ -1,10 +1,37 @@
+import type { Metadata } from "next";
 import { LegalLayout } from "@/components/legal/LegalLayout";
 
-export const metadata = {
-  title: "Acuerdo de Nivel de Servicio (SLA) — BMS",
-  description:
-    "Compromisos de disponibilidad, soporte y tiempos de respuesta por plan en la plataforma BMS.",
+const TITLE = "Acuerdo de Nivel de Servicio (SLA) — BMS";
+const DESCRIPTION =
+  "Compromisos de disponibilidad, soporte y tiempos de respuesta por plan en la plataforma BMS.";
+
+export const metadata: Metadata = {
+  title: TITLE,
+  description: DESCRIPTION,
   robots: { index: true, follow: true },
+  alternates: { canonical: "/sla" },
+  openGraph: {
+    type: "article",
+    locale: "es_MX",
+    url: "/sla",
+    siteName: "BMS · Business Management System",
+    title: TITLE,
+    description: DESCRIPTION,
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Acuerdo de Nivel de Servicio de BMS",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+    images: ["/twitter-image.png"],
+  },
 };
 
 const LAST_UPDATED = "9 de mayo de 2026";
