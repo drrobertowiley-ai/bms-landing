@@ -4,6 +4,7 @@ import { HeroSection } from "@/components/sections/HeroSection";
 import { TrustBar } from "@/components/sections/TrustBar";
 import { FeaturesSection } from "@/components/sections/FeaturesSection";
 import { ServiciosEspecialesSection } from "@/components/sections/ServiciosEspecialesSection";
+import { ProyectosEspecialesSection } from "@/components/sections/ProyectosEspecialesSection";
 import { SecuritySection } from "@/components/sections/SecuritySection";
 import { PricingSection } from "@/components/sections/PricingSection";
 import { OnPremiseSection } from "@/components/sections/OnPremiseSection";
@@ -57,6 +58,7 @@ export default function HomePage() {
         <SecuritySection />
         <PricingSection />
         <OnPremiseSection />
+        <ProyectosEspecialesSection />
         <CoBrandingSection />
         <FaqSection />
         <FinalCtaSection />
